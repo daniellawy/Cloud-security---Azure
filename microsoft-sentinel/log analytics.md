@@ -3,6 +3,7 @@
 ## Objective
 
 Verify ingested security telemetry and identify the Log Analytics tables used for investigation. 
+
 Step 1:  Enable an Analytics Rule                                                        
 → Log in to the Azure portal(opens in new tab) using your credentials                        
 → Go to your Microsoft Sentinel dashboard and select the available workspace              
@@ -12,12 +13,14 @@ Step 1:  Enable an Analytics Rule
 → Switch to the Rule templates tab                                                                    
 
 Step 2: Review the Enabled Analytics Rule
-Go back to the Analytics page of your Sentinel workspace
-Switch to the Active rules tab
-Select the recently saved rule - Rare subscription-level operations in Azure
-On the right pane, review the rule details, and scroll down to see your settings for:
+→ Go back to the Analytics page of your Sentinel workspace
+→ Switch to the Active rules tab
+→ Select the recently saved rule - Rare subscription-level operations in Azure
+→ On the right pane, review the rule details, and scroll down to see your settings for:
 Rule frequency
 Rule period
+
+
 
 ## Configuration
 
