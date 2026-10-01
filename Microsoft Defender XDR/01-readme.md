@@ -1,137 +1,150 @@
-# Microsoft Defender XDR — Fundamentals
+# Microsoft Defender XDR
 
 ## Objective
 
-Use Microsoft Defender XDR to review security telemetry, investigate alerts, analyze incidents, and correlate activity across identity, endpoint, email, and cloud workloads.
+Demonstrate practical Microsoft Defender XDR administration, security investigation, and threat-analysis workflows.
+
+The work in this section focuses on understanding the Defender XDR platform, configuring access controls, investigating security activity, and applying security concepts across endpoint and identity environments.
 
 ## Environment
 
 * Microsoft Defender XDR
 * Microsoft Defender portal
-* Connected Microsoft security services
-* Microsoft Entra ID
+* Microsoft Defender XDR Unified RBAC
 * Microsoft Defender for Endpoint
+* Microsoft Entra ID
+* Advanced Hunting
+* Defender security workloads available in the lab tenant
 
-## 1. Open Microsoft Defender XDR
+## Tasks Performed
 
-Open the Microsoft Defender portal and verify access to the security operations workspace.
+### 01 — XDR Configuration and RBAC
 
-Review:
+Configured and reviewed Microsoft Defender XDR Unified RBAC.
 
-* Incidents & alerts
-* Advanced hunting
-* Devices
-* Identities
-* Evidence & response
+Activities included:
 
-![Microsoft Defender XDR dashboard](../screenshots/fundamentals/01-defender-dashboard.png)
+* Accessing **Permissions and roles**
+* Reviewing available Defender workloads
+* Activating applicable workloads
+* Reviewing workload settings
+* Reviewing custom security roles
+* Reviewing permission groups
+* Reviewing role assignments
+* Reviewing assigned users/groups
+* Reviewing Defender data-source scope
+* Validating least-privilege access concepts
 
-## 2. Review Incidents
+### 02 — Defense Evasion
 
-Open **Incidents & alerts** and review the available incidents.
+Investigated techniques associated with attempts to avoid or bypass security controls.
 
-For a selected incident, inspect:
+Activities include:
 
-* Incident severity
-* Incident status
-* Alert count
-* Affected devices
-* Affected users
-* Evidence
-* Attack techniques
-* Incident timeline
+* Reviewing endpoint telemetry
+* Identifying suspicious process activity
+* Investigating security-control evasion indicators
+* Correlating process and network activity
+* Reviewing related alerts and evidence
 
-![Defender XDR incident](../screenshots/fundamentals/02-incident.png)
+### 03 — Privilege Escalation
 
-## 3. Investigate an Alert
+Investigated activity associated with attempts to obtain elevated permissions.
 
-Open an alert associated with the incident.
+Activities include:
 
-Review:
+* Reviewing identity activity
+* Investigating privileged account activity
+* Reviewing process and account context
+* Correlating endpoint and identity telemetry
 
-* Detection name
-* Detection source
-* Timestamp
-* Device
-* User
-* Process
-* Command line
-* Network indicators
-* Related evidence
+### 04 — Lateral Movement
 
-![Defender XDR alert](../screenshots/fundamentals/03-alert.png)
+Investigated activity associated with movement between systems.
 
-## 4. Review Incident Entities
+Activities include:
 
-Inspect the entities associated with the incident.
+* Reviewing device-to-device activity
+* Investigating authentication patterns
+* Reviewing network connections
+* Correlating users, devices, and processes
+* Identifying related security events
 
-Typical entities include:
+### 05 — Execution
 
-```text
-User
-  ↓
-Device
-  ↓
-Process
-  ↓
-File
-  ↓
-Network Connection
-```
+Investigated suspicious process and command execution.
 
-Use the entity information to correlate activity across the investigation.
+Activities include:
 
-![Incident entities](../screenshots/fundamentals/04-entities.png)
+* Reviewing process creation
+* Investigating command-line activity
+* Reviewing parent/child process relationships
+* Correlating execution with network activity
+* Reviewing associated Defender alerts
 
-## 5. Review Advanced Hunting
+### 06 — Credential Access
 
-Open **Advanced hunting** and execute a basic endpoint query.
+Investigated activity associated with credential theft and unauthorized authentication.
 
-```kql
-DeviceProcessEvents
-| project
-    Timestamp,
-    DeviceName,
-    AccountName,
-    FileName,
-    ProcessCommandLine
-| sort by Timestamp desc
-| take 50
-```
+Activities include:
 
-![Advanced hunting](../screenshots/fundamentals/05-advanced-hunting.png)
+* Reviewing authentication activity
+* Investigating account behavior
+* Correlating identity and endpoint telemetry
+* Reviewing suspicious credential-related activity
 
-## 6. Investigation Workflow
+## Evidence
 
-The Defender XDR investigation workflow used in this lab is:
+Evidence for each activity is stored with the relevant investigation or task.
 
 ```text
+defender-xdr/
+│
+├── defense-evasion/
+├── privilege-escalation/
+├── lateral-movement/
+├── execution/
+└── credential-access/
+```
+
+Screenshots are stored alongside the relevant Markdown documentation and show configuration, investigation, query results, alerts, incidents, and other lab results.
+
+Sensitive tenant-specific information should be sanitized or blurred before publishing the repository publicly.
+
+## Investigation Workflow
+
+The Defender XDR investigations follow a consistent workflow:
+
+```text
+Security Event
+      ↓
+Alert / Detection
+      ↓
 Incident
-   ↓
-Alert
-   ↓
+      ↓
 Entities
-   ↓
+      ↓
 Evidence
-   ↓
+      ↓
 Advanced Hunting
-   ↓
+      ↓
 Correlation
-   ↓
+      ↓
+Investigation
+      ↓
 Response / Escalation
 ```
 
-## Validation
+## Notes
 
-* [ ] Defender XDR portal accessible.
-* [ ] Incidents reviewed.
-* [ ] Alert details inspected.
-* [ ] Incident entities identified.
-* [ ] Advanced Hunting query executed.
-* [ ] Endpoint telemetry returned results.
+* Defender XDR provides a unified security operations interface across supported Microsoft security workloads.
+* Unified RBAC controls access through roles, permission groups, assignments, users/groups, and data-source scope.
+* Available Defender workloads and permissions depend on the tenant's licensing and configuration.
+* Incident investigations should correlate multiple evidence sources rather than relying on a single alert.
+* Advanced Hunting is used to query security telemetry and support proactive investigation.
+* Lab-specific usernames, hostnames, IP addresses, tenant identifiers, and other sensitive values should not be published unless intentionally sanitized.
 
 ## Result
 
-Microsoft Defender XDR was used to review incidents, inspect alerts and entities, correlate security telemetry, and perform endpoint investigation through Advanced Hunting.
+This section documents practical experience with Microsoft Defender XDR configuration, access control, security investigation, endpoint and identity telemetry analysis, and threat-oriented investigation workflows.
 
-> Portfolio note: sanitize tenant names, usernames, device names, IP addresses, email addresses, and other environment-specific identifiers before publishing screenshots.
