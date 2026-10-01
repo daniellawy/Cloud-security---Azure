@@ -3,12 +3,21 @@
 ## Objective
 
 Verify ingested security telemetry and identify the Log Analytics tables used for investigation. 
-Step 1: ## Enable an Analytics Rule                                                        Step 2: Review the Enabled Analytics Rule
-→ Log in to the Azure portal(opens in new tab) using your credentials                      Go back to the Analytics page of your Sentinel workspace   
-→ Go to your Microsoft Sentinel dashboard and select the available workspace               Switch to the Active rules tab  
-→ Under Content management, select Content hub                                             Select the recently saved rule - Rare subscription-level operations in Azure   
-→ Search for Azure Activity and install it                                            On the right pane, review the rule details, and scroll down to see your settings for:  → Under Configuration, select Analytics                                                               Rule frequency
-→ Switch to the Rule templates tab                                                                       Rule period
+Step 1:  Enable an Analytics Rule                                                        
+→ Log in to the Azure portal(opens in new tab) using your credentials                        
+→ Go to your Microsoft Sentinel dashboard and select the available workspace              
+→ Under Content management, select Content hub                                                
+→ Search for Azure Activity and install it   
+→ Under Configuration, select Analytics                                                           
+→ Switch to the Rule templates tab                                                                    
+
+Step 2: Review the Enabled Analytics Rule
+Go back to the Analytics page of your Sentinel workspace
+Switch to the Active rules tab
+Select the recently saved rule - Rare subscription-level operations in Azure
+On the right pane, review the rule details, and scroll down to see your settings for:
+Rule frequency
+Rule period
 
 ## Configuration
 
