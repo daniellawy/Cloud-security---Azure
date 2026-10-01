@@ -11,7 +11,7 @@ Deploy and configure a Microsoft Sentinel workspace for security monitoring, inv
 * Log Analytics Workspace
 * Kusto Query Language (KQL)
 
-## Capabilities Demonstrated
+## Tasks Performed
 
 * Creating and configuring a Log Analytics workspace
 * Enabling Microsoft Sentinel
