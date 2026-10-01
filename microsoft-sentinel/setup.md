@@ -1,4 +1,4 @@
-# Environment Setup — Lab Notes
+# Environment Setup - deployment
 
 ## Objective
 
