@@ -177,4 +177,4 @@ Microsoft Defender XDR Unified RBAC was configured/reviewed to demonstrate centr
 
 The lab demonstrates how roles, permission groups, assignments, users/groups, and data-source scope combine to implement least-privilege access.
 
-> Portfolio note: replace lab-specific role names, usernames, tenant information, and other environment-specific values where necessary before publishing screenshots.
+> Portfolio note: replace lab-specific role names, usernames, tenant information, and other environment-specific values where necessary
