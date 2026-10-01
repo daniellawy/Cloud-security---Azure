@@ -37,11 +37,11 @@ KQL Investigation
 ```
 
 ## Environment
-Resource	Value
-Sentinel Workspace	law-sentinel-lab
-Resource Group	rg-sentinel-lab
-Query Interface	Microsoft Sentinel → Logs
-Query Language	KQL
+Resource	           Value
+Sentinel Workspace	   law-sentinel-lab
+Resource Group	           rg-sentinel-lab
+Query Interface	Microsoft  Sentinel → Logs
+Query Language             KQL
 
 ## Tables
 
