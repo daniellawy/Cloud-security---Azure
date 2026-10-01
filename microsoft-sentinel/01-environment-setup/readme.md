@@ -1,17 +1,17 @@
 # Microsoft Sentinel — Environment Setup
 
-## Objective
+ Objective
 
 Deploy and configure a Microsoft Sentinel workspace for security monitoring, investigation, and detection engineering.
 
-## Environment
+ Environment
 
 - Microsoft Azure
 - Microsoft Sentinel
 - Log Analytics Workspace
 - Kusto Query Language (KQL)
 
-## Capabilities Demonstrated
+ Task Performed
 
 - Creating and configuring a Log Analytics workspace
 - Enabling Microsoft Sentinel
@@ -19,10 +19,10 @@ Deploy and configure a Microsoft Sentinel workspace for security monitoring, inv
 - Preparing the environment for security data ingestion
 - Using the environment for KQL-based investigation and threat hunting
 
-## Evidence
+ Evidence
 
 Screenshots and configuration evidence will be added as the environment is built and configured.
 
-## Notes
+ Notes
 
 This section documents the practical environment setup used for the security engineering exercises in this repository..
