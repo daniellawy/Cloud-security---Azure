@@ -27,7 +27,7 @@ Establish the Azure resources required for the Microsoft Sentinel lab.
 
 The Azure resources required for the Sentinel environment were deployed and the environment was ready for validation.
 
-![Deployment complete](screenshots/04-deployment-complete.png)
+![Deployment complete](screenshots/03-deployment-complete.png)
 
 ### 4. Microsoft Sentinel
 
@@ -46,7 +46,7 @@ The Azure resources required for the Sentinel environment were deployed and the 
 * [ ] Sentinel workspace accessible
 * [ ] Screenshots captured
 
-![Environment validation](screenshots/05-environment-validation.png)
+![Environment validation](screenshots/04-environment-validation.png)
 
 ## Observations
 
