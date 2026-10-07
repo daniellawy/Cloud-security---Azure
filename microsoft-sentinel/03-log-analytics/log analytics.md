@@ -43,7 +43,7 @@ The following settings were reviewed:
 * Detection logic
 * Incident configuration
 
-![Log Analytics wizard](screenshots/02-log-analytics-wizard.png)
+![Log Analytics wizard](screenshots/02-analytics-rule-wizard.png)
 
 ## 3. Review the Log Analytics Data
 
