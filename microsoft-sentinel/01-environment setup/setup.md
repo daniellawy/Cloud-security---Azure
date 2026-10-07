@@ -23,7 +23,13 @@ Establish the Azure resources required for the Microsoft Sentinel lab.
 
 ![Log Analytics workspace](screenshots/02-log-analytics-workspace.png)
 
-### 3. Microsoft Sentinel
+### 3. Deployment Complete
+
+The Azure resources required for the Sentinel environment were deployed and the environment was ready for validation.
+
+![Deployment complete](screenshots/04-deployment-complete.png)
+
+### 4. Microsoft Sentinel
 
 * Sentinel workspace:
 * Configuration status:
@@ -31,11 +37,6 @@ Establish the Azure resources required for the Microsoft Sentinel lab.
 
 ![Microsoft Sentinel enabled](screenshots/03-sentinel-enabled.png)
 
-### 4. Deployment Complete
-
-The Azure resources required for the Sentinel environment were deployed and the environment was ready for validation.
-
-![Deployment complete](screenshots/04-deployment-complete.png)
 
 ## Validation
 
