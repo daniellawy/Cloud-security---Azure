@@ -40,7 +40,7 @@ Microsoft Sentinel
 * **Purpose:** Azure subscription and resource activity monitoring
 * **Status:** Connected
 
-![Azure Activity connector](screenshots/02-azure-activity.png)
+![Azure Activity connector](screenshots/azure-activity-installed.png)
 
 ## 3. Microsoft Threat Intelligence
 
