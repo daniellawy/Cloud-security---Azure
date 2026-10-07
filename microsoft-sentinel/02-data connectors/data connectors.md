@@ -59,7 +59,7 @@ Microsoft Sentinel
 * **Purpose:** Threat intelligence and indicator monitoring
 * **Status:** Connected
 
-![Microsoft Threat Intelligence connector](screenshots/03-threat-intelligence.png)
+![Microsoft Threat Intelligence connector](screenshots/02-threat-intelligence.png)
 
 ## 4. Microsoft Defender XDR
 
@@ -78,7 +78,7 @@ Microsoft Sentinel
 * **Purpose:** Endpoint and threat telemetry
 * **Status:** Connected
 
-![Microsoft Defender XDR connector](screenshots/04-defender-xdr.png)
+![Microsoft Defender XDR connector](screenshots/03-defender-xdr.png)
 
 ## Validation
 
