@@ -23,7 +23,26 @@ Microsoft Sentinel
 
 ![Microsoft Entra ID connector](screenshots/01-entra-id.png)
 
-## 2. Microsoft Threat Intelligence
+## 2. Azure Activity
+
+### Configuration
+
+```text
+Microsoft Sentinel
+→ Content Hub
+→ Azure Activity
+→ Install Solution
+→ Data Connectors
+→ Azure Activity
+→ Configure
+```
+
+* **Purpose:** Azure subscription and resource activity monitoring
+* **Status:** Connected
+
+![Azure Activity connector](screenshots/02-azure-activity.png)
+
+## 3. Microsoft Threat Intelligence
 
 ### Configuration
 
@@ -40,9 +59,9 @@ Microsoft Sentinel
 * **Purpose:** Threat intelligence and indicator monitoring
 * **Status:** Connected
 
-![Microsoft Threat Intelligence connector](screenshots/02-threat-intelligence.png)
+![Microsoft Threat Intelligence connector](screenshots/03-threat-intelligence.png)
 
-## 3. Microsoft Defender XDR
+## 4. Microsoft Defender XDR
 
 ### Configuration
 
@@ -59,11 +78,12 @@ Microsoft Sentinel
 * **Purpose:** Endpoint and threat telemetry
 * **Status:** Connected
 
-![Microsoft Defender XDR connector](screenshots/03-defender-xdr.png)
+![Microsoft Defender XDR connector](screenshots/04-defender-xdr.png)
 
 ## Validation
 
 * [ ] Entra ID telemetry verified
+* [ ] Azure Activity telemetry verified
 * [ ] Microsoft Threat Intelligence configured
 * [ ] Defender XDR telemetry verified
 * [ ] Telemetry verified in Log Analytics
@@ -72,7 +92,8 @@ Microsoft Sentinel
 
 ```text
 Microsoft Entra ID ───────────────┐
-Microsoft Threat Intelligence ────┼──→ Microsoft Sentinel
+Azure Activity ──────────────────┤
+Microsoft Threat Intelligence ───┼──→ Microsoft Sentinel
 Microsoft Defender XDR ───────────┘
                                       ↓
                               Log Analytics Workspace
@@ -82,4 +103,5 @@ Microsoft Defender XDR ───────────┘
 
 ## Result
 
-Identity, threat-intelligence, and endpoint security telemetry are connected to Microsoft Sentinel and available for investigation.
+Identity, Azure activity, threat-intelligence, and endpoint security telemetry are connected to Microsoft Sentinel and available for investigation.
+
