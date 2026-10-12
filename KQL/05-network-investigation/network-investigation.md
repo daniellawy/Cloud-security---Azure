@@ -28,33 +28,11 @@ SecurityEvent_CL
 
 Review recent security records collected during the last 24 hours.
 
-![Recent security activity](../screenshots/network/01-network-activity.png)
+![Recent security activity](screenshots/Recent-Activity.png)
 
 ---
 
-## 2. Investigate Logon-Related Identifiers
-
-```kql
-SecurityEvent_CL
-| where TimeGenerated >= ago(24h)
-| where isnotempty(LogonGuid_g)
-    or isnotempty(TargetLogonGuid_g)
-| project
-    TimeGenerated,
-    SourceComputerId_g,
-    LogonGuid_g,
-    TargetLogonGuid_g
-| sort by TimeGenerated desc
-| take 100
-```
-
-Review events containing logon identifiers for further investigation. These identifiers do not independently establish that a network connection occurred.
-
-![Logon identifier investigation](../screenshots/network/02-logon-identifiers.png)
-
----
-
-## 3. Review Activity by Source Computer ID
+## 2. Review Activity by Source Computer ID
 
 ```kql
 SecurityEvent_CL
@@ -70,11 +48,11 @@ SecurityEvent_CL
 
 Identify source computer IDs associated with the highest number of recorded events.
 
-![Activity by source computer](../screenshots/network/03-activity-by-computer.png)
+![Activity by source computer](screenshots/Review-Activity-by-Source-Computer-ID.png)
 
 ---
 
-## 4. Identify Frequently Reported Event Types
+## 3. Identify Frequently Reported Event Types
 
 ```kql
 SecurityEvent_CL
@@ -86,31 +64,26 @@ SecurityEvent_CL
 
 Compare event volumes by recorded type to identify patterns that may warrant further review.
 
-![Event type summary](../screenshots/network/04-event-types.png)
+![Event type summary](screenshots/Identify-Frequently-Reporting-Event-Types.png)
 
 ---
 
-## 5. Review Activity by Event Origin ID
+## 4. Review Activity by Event Origin ID
 
 ```kql
 SecurityEvent_CL
-| where TimeGenerated >= ago(24h)
-| summarize
-    EventCount = count(),
-    FirstSeen = min(TimeGenerated),
-    LastSeen = max(TimeGenerated)
-    by EventOriginId_g
-| sort by EventCount desc
-| take 20
+| summarize ConnectionCount = count()
+| sort by ConnectionCount desc
+
 ```
 
-Identify event origin IDs associated with repeated records. Confirm the meaning of this field in the source data before drawing conclusions about the origin of an event.
+Identify event origin IDs associated with repeated records. 
 
-![Activity by event origin](../screenshots/network/05-event-origin.png)
+![Activity by event origin](screenshots/05-network-by-process.png)
 
 ---
 
-## 6. Identify Repeated Logon GUIDs
+## 5. Identify Repeated Logon GUIDs
 
 ```kql
 SecurityEvent_CL
@@ -127,11 +100,11 @@ SecurityEvent_CL
 
 Identify logon GUIDs appearing in multiple records and review their associated events for context.
 
-![Repeated logon identifiers](../screenshots/network/06-logon-frequency.png)
+![Repeated logon identifiers](screenshots/Review-Repeated-Logon-GUIDs.png)
 
 ---
 
-## 7. Investigation
+## 6. Investigation
 
 Review the available security-event data and correlate records using their timestamps, source computer IDs, event origin IDs, and logon-related identifiers.
 
