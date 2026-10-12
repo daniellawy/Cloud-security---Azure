@@ -20,25 +20,14 @@ The workspace uses a custom table rather than the standard `SigninLogs` table. U
 
 ```kql
 SigninLogs_CL
-| project
-    TimeGenerated,
-    UserPrincipalName_s,
-    UserDisplayName_s,
-    UserId_g,
-    UserType_s,
-    UserAgent_s,
-    TokenIssuerName_s,
-    TokenIssuerType_s,
-    UniqueTokenIdentifier_s
-| sort by TimeGenerated desc
-| take 100
+| take 20
 ```
 
 Review recent identity records to establish which accounts appear in the available telemetry, when records were generated, and which user agents and token issuers are associated with the activity.
 
 This provides the baseline for the subsequent investigations.
 
-![User sign-in activity](../screenshots/identity/01-user-signins.png)
+![User sign-in activity](screenshots/01-user-signins.png)
 
 ---
 
@@ -66,7 +55,7 @@ Review the available IP address and location fields associated with identity rec
 
 Use this information to identify location patterns that may require verification against expected user activity. Location information can be incomplete or approximate, and a location difference alone does not establish malicious activity.
 
-![User location details](../screenshots/identity/07-user-location-details.png)
+![User location details](screenshots/07-user-location-details.png)
 
 ---
 
@@ -90,7 +79,7 @@ Identify IP addresses associated with multiple distinct user accounts in the ava
 
 Review the number of accounts, event volume, and observed time window for each IP address. Shared addresses may represent corporate networks, VPNs, proxies, or other legitimate shared infrastructure. Investigate unexpected patterns rather than treating shared IP usage as proof of compromise.
 
-![Shared IP address investigation](../screenshots/identity/08-shared-ip-address-investigation.png)
+![Shared IP address investigation](screenshots/08-shared-ip-address-investigation.png)
 
 ---
 
@@ -114,7 +103,7 @@ Examine user-agent strings associated with multiple accounts. User-agent values 
 
 Investigate unexpected user-agent patterns, especially when considered alongside IP addresses, account activity, and timestamps. User-agent strings can be shared, modified, or spoofed, so they should not be used as a standalone indicator of malicious activity.
 
-![User-agent investigation](../screenshots/identity/09-user-agent-investigation.png)
+![User-agent investigation](screenshots/09-user-agent-investigation.png)
 
 ---
 
@@ -138,7 +127,7 @@ Establish the earliest and latest observed timestamps for each account in the av
 
 The activity window represents the records available in the workspace, not necessarily the account's complete sign-in history. The first and last timestamps depend on the available telemetry and selected query time range.
 
-![Account activity overview](../screenshots/identity/10-account-activity-overview.png)
+![Account activity overview](screenshots/10-account-activity-overview.png)
 
 ---
 
