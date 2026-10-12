@@ -12,7 +12,7 @@ Navigate to:
 
 Review the available workbook templates.
 
-![Sentinel workbook](screenshots/workbook/01-sentinel-workbook.png)
+![Sentinel workbook](screenshots/workbook/sentinel-workbook.png)
 
 ## 2. Deploy a Workbook
 
@@ -25,7 +25,7 @@ Configure:
 - Log Analytics workspace
 - Workbook name
 
-![Workbook configuration](screenshots/workbook/02-workbook-configuration.png)
+![Workbook configuration](screenshots/workbook/workbook-configuration.png)
 
 ## 3. Review Workbook
 
@@ -39,13 +39,13 @@ Review metrics such as:
 - Alert activity
 - Geographic activity
 
-![Workbook dashboard](screenshots/workbook/03-workbook-dashboard.png)
+![Workbook dashboard](screenshots/workbook/workbook-dashboard.png)
 
 ## 4. Query Workbook Data
 
 Review the underlying queries used by the workbook to understand how the visualizations are generated from Log Analytics data.
 
-![Workbook query](screenshots/workbook/04-workbook-query.png)
+![Workbook query](screenshots/workbook/workbook-query.png)
 
 ## Validation
 
