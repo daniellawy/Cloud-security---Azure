@@ -6,9 +6,9 @@ Use core KQL operators to filter, select, transform, sort, and aggregate securit
 
 ## Environment
 
-* Microsoft Sentinel
-* Log Analytics Workspace
-* KQL
+- Microsoft Sentinel
+- Log Analytics Workspace
+- KQL
 
 ---
 
@@ -21,9 +21,9 @@ SecurityEvent
 | where TimeGenerated > ago(3h)
 ```
 
-**Purpose:** Identify failed sign-in events.
+**Purpose:** Identify events within a specified time range.
 
-![KQL where operator](../screenshots/core-operators/01-where.png)
+![KQL where operator](../screenshots/01-where.png)
 
 ---
 
@@ -38,7 +38,7 @@ SecurityEvent
 
 **Purpose:** Reduce the result set to relevant authentication fields.
 
-![KQL project operator](../screenshots/core-operators/02-project.png)
+![KQL project operator](../screenshots/02-project.png)
 
 ---
 
@@ -54,22 +54,22 @@ SigninLogs
 
 **Purpose:** Create derived fields for analysis.
 
-![KQL extend operator](../screenshots/fundamentals/03-extend.png)
-
 ---
 
 ## 4. `sort` — Order Results
 
-Sort events by timestamp.
+Filter virtual machine connection events by computer and remote country, then sort the results by process name.
 
 ```kql
-SecurityEvent
-| sort by TimeGenerated desc
+VMConnection
+| where Computer == "DC11.na.contosohotels.com"
+| where RemoteCountry == "France"
+| order by ProcessName asc
 ```
 
-**Purpose:** Display the newest events first.
+**Purpose:** Organize matching connection events by process name in ascending order.
 
-![KQL sort operator](../screenshots/fundamentals/04-sort.png)
+![KQL sort operator](../screenshots/04-sort.png)
 
 ---
 
@@ -87,8 +87,6 @@ SecurityEvent
 
 **Purpose:** Identify accounts with high numbers of failed authentication attempts.
 
-![KQL summarize operator](../screenshots/fundamentals/05-summarize.png)
-
 ---
 
 ## 6. `distinct` — Identify Unique Values
@@ -103,8 +101,6 @@ SecurityEvent
 
 **Purpose:** Identify unique IP addresses associated with failed sign-ins.
 
-![KQL distinct operator](../screenshots/fundamentals/06-distinct.png)
-
 ---
 
 ## 7. `take` — Limit Results
@@ -118,21 +114,20 @@ SecurityEvent
 
 **Purpose:** Quickly inspect the structure and available data in a table.
 
-![KQL take operator](../screenshots/fundamentals/07-take.png)
+![KQL take operator](../screenshots/07-take.png)
 
 ---
 
 ## Validation
 
-* [ ] `where` query executed
-* [ ] `project` query executed
-* [ ] `extend` query executed
-* [ ] `sort` query executed
-* [ ] `summarize` query executed
-* [ ] `distinct` query executed
-* [ ] `take` query executed
+- [ ] `where` query executed
+- [ ] `project` query executed
+- [ ] `extend` query executed
+- [ ] `sort` query executed
+- [ ] `summarize` query executed
+- [ ] `distinct` query executed
+- [ ] `take` query executed
 
 ## Result
 
 Core KQL operators were used to filter, select, transform, sort, sample, and aggregate security telemetry for investigation.
-
