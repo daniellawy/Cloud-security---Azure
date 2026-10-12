@@ -23,40 +23,12 @@ SecurityEvent
 
 **Purpose:** Identify events within a specified time range.
 
-![KQL where operator](../screenshots/01-where.png)
+![KQL where operator](screenshots/01-where.png)
 
 ---
 
-## 2. `project` — Select Columns
 
-Return only the fields required for investigation.
-
-```kql
-SecurityEvent
-| project TimeGenerated, UserPrincipalName, IPAddress, ResultDescription
-```
-
-**Purpose:** Reduce the result set to relevant authentication fields.
-
-![KQL project operator](../screenshots/02-project.png)
-
----
-
-## 3. `extend` — Create Calculated Fields
-
-Create a new column from existing data.
-
-```kql
-SigninLogs
-| extend SignInResult = tostring(ResultDescription)
-| project TimeGenerated, UserPrincipalName, SignInResult
-```
-
-**Purpose:** Create derived fields for analysis.
-
----
-
-## 4. `sort` — Order Results
+## 2. `sort` — Order Results
 
 Filter virtual machine connection events by computer and remote country, then sort the results by process name.
 
@@ -69,11 +41,11 @@ VMConnection
 
 **Purpose:** Organize matching connection events by process name in ascending order.
 
-![KQL sort operator](../screenshots/04-sort.png)
+![KQL sort operator](screenshots/03-sort.png)
 
 ---
 
-## 5. `summarize` — Aggregate Events
+## 3. `summarize` — Aggregate Events
 
 Count failed sign-ins by user.
 
@@ -89,21 +61,8 @@ SecurityEvent
 
 ---
 
-## 6. `distinct` — Identify Unique Values
 
-Return unique source IP addresses.
-
-```kql
-SecurityEvent
-| where ResultType != 0
-| distinct IPAddress
-```
-
-**Purpose:** Identify unique IP addresses associated with failed sign-ins.
-
----
-
-## 7. `take` — Limit Results
+## 4. `take` — Limit Results
 
 Return a small sample of events.
 
@@ -114,7 +73,7 @@ SecurityEvent
 
 **Purpose:** Quickly inspect the structure and available data in a table.
 
-![KQL take operator](../screenshots/07-take.png)
+![KQL take operator](screenshots/07-take.png)
 
 ---
 
