@@ -26,7 +26,7 @@ ConfigurationData_CL
 
 Review the returned software records and identify the affected computers.
 
-![TeamViewer software inventory](screenshots/endpoint/01-teamviewer-inventory.png)
+![TeamViewer software inventory](screenshots/01-teamviewer-inventory.png)
 
 ---
 
@@ -44,7 +44,7 @@ Update_CL
 
 Review the computer name, update title, KB identifier, classification, and severity to support patch-management prioritization.
 
-![Pending updates](screenshots/endpoint/02-pending-updates.png)
+![Pending updates](screenshots/02-pending-updates.png)
 
 ---
 
