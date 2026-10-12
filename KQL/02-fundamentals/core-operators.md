@@ -17,13 +17,13 @@ Use core KQL operators to filter, select, transform, sort, and aggregate securit
 Filter events based on a specific condition.
 
 ```kql
-SigninLogs
-| where ResultType != 0
+SecurityEvent
+| where TimeGenerated > ago(3h)
 ```
 
 **Purpose:** Identify failed sign-in events.
 
-![KQL where operator](../screenshots/fundamentals/01-where.png)
+![KQL where operator](../screenshots/core-operators/01-where.png)
 
 ---
 
@@ -32,13 +32,13 @@ SigninLogs
 Return only the fields required for investigation.
 
 ```kql
-SigninLogs
+SecurityEvent
 | project TimeGenerated, UserPrincipalName, IPAddress, ResultDescription
 ```
 
 **Purpose:** Reduce the result set to relevant authentication fields.
 
-![KQL project operator](../screenshots/fundamentals/02-project.png)
+![KQL project operator](../screenshots/core-operators/02-project.png)
 
 ---
 
@@ -63,7 +63,7 @@ SigninLogs
 Sort events by timestamp.
 
 ```kql
-SigninLogs
+SecurityEvent
 | sort by TimeGenerated desc
 ```
 
@@ -78,7 +78,7 @@ SigninLogs
 Count failed sign-ins by user.
 
 ```kql
-SigninLogs
+SecurityEvent
 | where ResultType != 0
 | summarize FailedAttempts = count()
     by UserPrincipalName
@@ -96,7 +96,7 @@ SigninLogs
 Return unique source IP addresses.
 
 ```kql
-SigninLogs
+SecurityEvent
 | where ResultType != 0
 | distinct IPAddress
 ```
@@ -112,7 +112,7 @@ SigninLogs
 Return a small sample of events.
 
 ```kql
-SigninLogs
+SecurityEvent
 | take 10
 ```
 
