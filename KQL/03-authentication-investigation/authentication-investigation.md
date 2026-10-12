@@ -32,7 +32,7 @@ SecurityEvent_CL
 
 Review the `Activity_s` field to identify relevant or suspicious activity.
 
-![Account security events](../screenshots/authentication/01-account-events.png)
+![Account security events](screenshots/01-account-events.png)
 
 ---
 
@@ -49,7 +49,7 @@ SecurityEvent_CL
 
 Review the event timestamps and available event details.
 
-![Authentication events](../screenshots/authentication/02-authentication-events.png)
+![Authentication events](screenshots/02-authentication-events.png)
 
 ---
 
@@ -68,7 +68,7 @@ SecurityEvent_CL
 
 Use the results to identify systems associated with the account's authentication activity.
 
-![Authentication events by system](../screenshots/authentication/03-authentication-by-system.png)
+![Authentication events by system](screenshots/03-authentication-by-system.png)
 
 ---
 
