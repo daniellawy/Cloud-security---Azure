@@ -37,7 +37,7 @@ Identify source IP addresses associated with multiple accounts in the available 
 
 Review the number of accounts, event volume, and observed time window for each IP address. Investigate unexpected patterns rather than treating shared IP usage as proof of compromise.
 
-![Hunt for IP Addresses Associated with Multiple Accounts](screenshots/hunt-for-ip-addresses-associated-with-multiple-accounts.png)
+![Hunt for IP Addresses Associated with Multiple Accounts](screenshots/Hunt-for-IP-Addresses-Associated-with-Multiple-Accounts.png)
 
 ---
 
@@ -59,7 +59,7 @@ SigninLogs_CL
 
 Review user-agent strings associated with relatively few accounts and identify patterns that may warrant further investigation.
 
-![Hunt for Unusual User-Agent Patterns](screenshots/hunt-for-unusual-user-agent-patterns.png)
+![Hunt for Unusual User-Agent Patterns](screenshots/Hunt-for-Unusual-User-Agent-Patterns.png)
 
 ---
 
@@ -83,7 +83,7 @@ Identify account-hour combinations with at least 20 records in the available ide
 
 Review high-volume periods alongside IP address and user-agent diversity. Adjust the threshold after establishing a baseline for normal activity. The query counts records; it does not establish that every record represents a distinct authentication attempt.
 
-![Hunt for Unusually High Account Activity](screenshots/hunt-for-unusually-high-account-activity.png)
+![Hunt for Unusually High Account Activity](screenshots/Hunt-for-Unusually-High-Account-Activity.png)
 
 ---
 
@@ -105,7 +105,7 @@ Review token issuer names and types associated with the available identity recor
 
 Investigate unfamiliar issuer values by comparing them with the expected identity configuration.
 
-![Hunt for Unusual Token Issuer Patterns](screenshots/hunt-for-unusual-token-issuer-patterns.png)
+![Hunt for Unusual Token Issuer Patterns](screenshots/Hunt-for-Unusual-Token-Issuer-Patterns.png)
 
 ---
 
@@ -130,7 +130,7 @@ Identify repeated logon GUID values and examine their associated source-computer
  The `TimeCollected_UTC__s` field is treated as a string because that is how it is defined in the available schema.
 
 
-![Hunt for Repeated Security Event Identifiers](screenshots/05-hunt-for-repeated-security-event-identifiers.png)
+![Hunt for Repeated Security Event Identifiers](screenshots/Hunt-for-Repeated-Security-Event-Identifiers.png)
 
 ---
 
@@ -153,8 +153,7 @@ For any pattern that warrants review:
 - [x] High-volume account activity investigated.
 - [x] Token issuer patterns reviewed.
 - [x] Repeated security event identifiers investigated.
-- [ ] Findings validated against expected activity and supporting evidence.
-- [ ] Potentially suspicious patterns documented for follow-up.
+
 
 ## Result
 
