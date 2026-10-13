@@ -40,7 +40,7 @@ SigninLogs
 | order by TimeGenerated desc
 ```
 
-![Failed sign-in detection](screenshots/01-failed-signins.png)
+![Failed sign-in detection](screenshots/failed-sign-ins.png)
 
 ## 2. Detect Suspicious PowerShell Execution
 
@@ -63,7 +63,7 @@ DeviceProcessEvents
 | order by Timestamp desc
 ```
 
-![PowerShell detection](screenshots/02-powershell-detection.png)
+![PowerShell detection](screenshots/suspicious-powershell-execution.png)
 
 ## 3. Detect PowerShell Network Activity
 
@@ -142,5 +142,3 @@ Confirm:
 ## Result
 
 KQL detection logic was developed, validated, and prepared for deployment as Microsoft Sentinel analytics rules.
-
-> Portfolio note: environment-specific usernames, device names, IP addresses, tenant identifiers, and other sensitive values should be sanitized before publishing screenshots.
