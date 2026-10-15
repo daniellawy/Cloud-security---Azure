@@ -102,9 +102,9 @@ The investigation reviewed the relationship between:
 ```text
 User
  ↓
-cmd.exe
- ↓
 reg.exe
+ ↓
+powershell.exe
  ↓
 Registry modification
 ```
@@ -121,7 +121,7 @@ The detection metadata was reviewed to confirm the classification and severity o
 | Severity           | High                                                        |
 | Tactic             | Defense Evasion                                             |
 | Process            | `reg.exe`                                                   |
-| Initiating process | `cmd.exe`                                                   |
+| Initiating process | `powershell.exe`                                                   |
 | Device             | `<DEVICE_NAME>`                                             |
 | User               | `<USER_ACCOUNT>`                                            |
 
@@ -151,7 +151,7 @@ Microsoft Defender XDR Detection
               ↓
 Potential human-operated malicious activity
               ↓
-Process tree
+Registry modification
               ↓
 reg.exe
               ↓
