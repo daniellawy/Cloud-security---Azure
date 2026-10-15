@@ -119,7 +119,7 @@ Keep:
 
 disabled.
 
-![Branch policies](screenshots/06-branch-policies.png)
+![Branch policies](screenshots/07-branch-policy-saved.png)
 
 ## 7. Save the Branch Policy
 
