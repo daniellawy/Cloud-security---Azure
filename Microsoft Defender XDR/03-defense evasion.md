@@ -2,7 +2,7 @@
 
 ## Objective
 
-Investigate a Microsoft Defender XDR incident involving an attempt to turn off Microsoft Defender Antivirus protection.
+Investigate a Microsoft Defender XDR incident involving a Potential human-operated malicious activity.
 
 ## Environment
 
@@ -22,7 +22,7 @@ Navigate to:
 Set the time range to **6 months** and search for:
 
 ```text
-Attempt to turn off Microsoft Defender Antivirus protection
+Potential human-operated malicious activity
 ```
 
 Open the matching incident.
