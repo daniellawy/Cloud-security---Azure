@@ -48,7 +48,7 @@ The alert showed:
 | Event    | `powershell.exe` executed a script            |
 | Alert    | A script with suspicious content was observed |
 
-![Alert timeline](screenshots/03-alert-timeline.png)
+![Alert timeline](screenshots/03-alert-time-line.png)
 
 ## 4. Review Script Execution Details
 
