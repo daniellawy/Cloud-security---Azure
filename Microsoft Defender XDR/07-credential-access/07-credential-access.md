@@ -16,7 +16,7 @@ Locate the incident associated with the credential-theft investigation. Look for
 
 Open the alert page.
 
-[Mimikatz incident](screenshots/01-mimikatz-incident.png)
+![Mimikatz incident](screenshots/01-mimikatz-incident.png)
 
 ## 2. Review Alert Context
 
@@ -30,7 +30,7 @@ The investigation reviewed:
 - Process and parent-process information
 - Credential-access detection details
 
-[Mimikatz alert](screenshots/02-mimikatz-alert.png)
+![Mimikatz alert](screenshots/02-mimikatz-alert.png)
 
 ## 3. Review the Alert Timeline
 
@@ -48,7 +48,7 @@ Record the actual values displayed in the alert.
 
 Do not substitute assumed values for information that is not present in the alert.
 
-[Mimikatz alert timeline](screenshots/03-mimikatz-alert-timeline.png)
+![Mimikatz alert timeline](screenshots/03-mimikatz-alert-timeline.png)
 
 ## 4. Review Process Execution Evidence
 
@@ -58,7 +58,7 @@ Review the available process name, parent process, command-line context, timesta
 
 The exact command line and sensitive execution details are not reproduced in this public documentation.
 
-[Mimikatz process execution](screenshots/04-mimikatz-process-execution.png)
+![Mimikatz process execution](screenshots/04-mimikatz-process-execution.png)
 
 ## 5. Review Credential-Access Evidence
 
@@ -68,7 +68,7 @@ Assess whether the alert identifies credential-access behavior, such as suspicio
 
 A Mimikatz-related alert is an investigative lead; validate the process evidence and surrounding activity before concluding that credentials were successfully extracted.
 
-[Mimikatz credential-access evidence](screenshots/05-mimikatz-credential-access-evidence.png)
+![Mimikatz credential-access evidence](screenshots/05-mimikatz-credential-access-evidence.png)
 
 ## 6. Review Response Actions
 
@@ -84,7 +84,7 @@ Depending on the incident and permissions, available actions may include:
 
 Document only the actions actually performed. Do not imply that the device was isolated, credentials were reset, or remediation was completed unless this was verified.
 
-[Mimikatz response actions](screenshots/06-mimikatz-response-actions.png)
+![Mimikatz response actions](screenshots/06-mimikatz-response-actions.png)
 
 ## 7. Open Advanced Hunting
 
@@ -92,7 +92,7 @@ From the alert timeline, select **Go hunt** if the option is available.
 
 Use Advanced Hunting to expand the investigation beyond the original alert. Examine activity around the alert timestamp and look for related process execution, account activity, and other events on the affected device.
 
-[Advanced Hunting entry point](screenshots/07-mimikatz-go-hunt.png)
+![Advanced Hunting entry point](screenshots/07-mimikatz-go-hunt.png)
 
 ## 8. Run an Advanced Hunting Query
 
@@ -117,7 +117,7 @@ DeviceProcessEvents
 
 This is a name-based hunting query, not a comprehensive credential-dumping detector. It can miss renamed binaries and may return benign test or security-tool activity. The table and columns must be available in your Defender XDR Advanced Hunting environment; they are not confirmed as tables in your separate Azure Log Analytics workspace.
 
-[Advanced Hunting results](screenshots/08-mimikatz-advanced-hunting.png)
+![Advanced Hunting results](screenshots/08-mimikatz-advanced-hunting.png)
 
 ## Investigation Flow
 
