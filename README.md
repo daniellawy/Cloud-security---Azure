@@ -100,29 +100,22 @@ A structured learning path covering the SIEM workflow, from environment setup an
 
 ### 2. KQL
 
-[Open the KQL projects](./kql/)
+[Open the KQL projects](./KQL/)
 
 A collection of query-development and investigation topics covering authentication, endpoint activity, network events, identities, threat hunting, and detection engineering.
 
 ### 3. Microsoft Defender XDR
 
-[Open the Defender XDR projects](./defender-xdr/)
+[Open the Defender XDR projects](./Microsoft-Defender-XDR/)
 
 Investigations organized around adversary behaviour and security techniques, including credential access, execution, privilege escalation, lateral movement, and defense evasion.
 
 ### 4. Azure Cloud Penetration Testing
 
-[Open the Azure cloud-testing projects](./azure-cloud-penetration-testing/)
+[Open the Azure cloud-testing projects](./Azure-cloud-penetration-testing/)
 
 Authorized cloud-security testing concepts, cloud configuration assessment, and DevSecOps-related learning.
 
-### 5. Security Investigations
-
-[Open the investigation case studies](./investigations/)
-
-Documented cases that bring technical analysis together with evidence, conclusions, and defensive recommendations.
-
----
 
 ## 1. Microsoft Sentinel
 
@@ -308,7 +301,7 @@ Topics include:
 
 ## 2. Kusto Query Language (KQL)
 
-**Directory:** [`kql/`](./kql/)
+**Directory:** [`KQL/`](./KQL/)
 
 KQL is central to investigating security telemetry in Azure Monitor, Log Analytics, and supported Microsoft security environments.
 
