@@ -106,7 +106,7 @@ A collection of query-development and investigation topics covering authenticati
 
 ### 3. Microsoft Defender XDR
 
-[Open the Defender XDR projects](./[Microsoft Defender XDR](./Microsoft-Defender-XDR/)
+[Open the Defender XDR projects](./[Microsoft Defender XDR](./Microsoft%20Defender%20XDR/)/)
 
 Investigations organized around adversary behaviour and security techniques, including credential access, execution, privilege escalation, lateral movement, and defense evasion.
 
