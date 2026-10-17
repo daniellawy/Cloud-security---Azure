@@ -177,9 +177,9 @@ Topics include:
 - `tables.md` — table and schema notes.
 - `screenshots/` — supporting evidence, where available.
 
-### Project 04 — KQL Investigation
+### Project 04 — Investigation Triage
 
-[Open 04-kql-investigation](./microsoft-sentinel/04-kql-investigation/)
+[Open 04-investigation-triage](./microsoft-sentinel/04-investigation-triage/)
 
 **Purpose:** Apply KQL to investigate available security telemetry.
 
@@ -232,44 +232,10 @@ Topics include:
 - `README.md` — alert investigation notes.
 - `screenshots/` — supporting evidence, where available.
 
-### Project 07 — Incidents
 
-[Open 07-incidents](./microsoft-sentinel/07-incidents/)
+### Project 07 — Workbooks
 
-**Purpose:** Examine how related alerts and evidence can be managed as a security incident.
-
-Topics include:
-
-- Incident review and prioritization.
-- Assessing scope and potential impact.
-- Recording investigation progress.
-- Understanding incident status and response workflows.
-
-**Key files:**
-- `README.md` — incident-management documentation.
-- `screenshots/` — supporting evidence, where available.
-
-### Project 08 — Investigations
-
-[Open 08-investigations](./microsoft-sentinel/08-investigations/)
-
-**Purpose:** Develop a structured approach to following evidence from an initial alert or investigative question.
-
-Topics include:
-
-- Establishing a working hypothesis.
-- Examining related events and entities.
-- Correlating available evidence.
-- Recording findings and investigative limitations.
-- Identifying next steps.
-
-**Key files:**
-- `README.md` — investigation workflow and notes.
-- `screenshots/` — supporting evidence, where available.
-
-### Project 09 — Workbooks
-
-[Open 09-workbooks](./microsoft-sentinel/09-workbooks/)
+[Open 07-workbooks](./microsoft-sentinel/07-workbooks/)
 
 **Purpose:** Explore how security telemetry can be summarized and presented for investigation and monitoring.
 
@@ -282,9 +248,9 @@ Topics include:
 
 **Key file:** `README.md`
 
-### Project 10 — Automation
+### Project 08 — Automation
 
-[Open 10-automation](./microsoft-sentinel/10-automation/)
+[Open 08-automation](./microsoft-sentinel/08-automation/)
 
 **Purpose:** Study automation concepts that support consistent security operations.
 
@@ -307,74 +273,77 @@ KQL is central to investigating security telemetry in Azure Monitor, Log Analyti
 
 This section organizes query development by investigative domain.
 
-### [Fundamentals](./KQL/fundamentals/)
+### [Fundamentals](./KQL/02-fundamentals/)
 
 Core query syntax, filtering, projection, sorting, aggregation, time ranges, and data exploration.
 
-### [Authentication](./KQL/authentication-investigation/)
+### [Authentication Investigation](./KQL/03-authentication-investigation/)
 
 Authentication-event analysis, sign-in patterns, account activity, and risk-related metadata where available.
 
-### [Endpoint Investigation](./KQL/endpoint-investigation/)
+### [Endpoint Investigation](./KQL/04-endpoint-investigation/)
 
 Investigation of process execution and endpoint events when suitable endpoint telemetry is available.
 
-### [Network Investigation](./KQL/network-investigation/)
+### [Network Investigation](./KQL/05-network-investigation/)
 
 Analysis of network-related events, connections, and communication patterns where the data source contains the required fields.
 
-### [Identity Investigation](./KQL/identity-investigation/)
+### [Identity Investigation](./KQL/06-identity-investigation/)
 
 Investigation of identity activity, account relationships, authentication context, and access-related events.
 
-### [Threat Hunting Investigation](./KQL/threat-hunting-investigation/)
+### [Threat Hunting Investigation](./KQL/07-threat-hunting-investigation/)
 
 Hypothesis-driven searches for patterns that may indicate suspicious behaviour and warrant further analysis.
 
-### [Detection Engineering](./KQL/detection-engineering/)
+### [Detection Engineering](./KQL/08-detection-engineering/)
 
 Development and refinement of query logic intended to identify security-relevant activity.
 
-**Important:** Table names and fields vary between Azure Log Analytics and Defender XDR Advanced Hunting. Queries should be validated against the actual environment and schema before use.
+**Important:** Table names and fields vary between Azure Log Analytics and Microsoft Defender XDR Advanced Hunting. Validate queries against the actual environment and schema before use.
 
 ---
 
 ## 3. Microsoft Defender XDR
 
-**Directory:** [`defender-xdr/`](./defender-xdr/)
+**Directory:** [`Microsoft Defender XDR/`](./Microsoft%20Defender%20XDR/)
 
 This section organizes security investigation topics around common adversary tactics and techniques.
 
 The objective is to understand how defenders recognize suspicious behaviour, investigate available evidence, and determine appropriate response measures.
 
-### [Defense Evasion](./defender-xdr/defense-evasion/)
+### [Configuration and Unified RBAC](./Microsoft%20Defender%20XDR/02-configuration-and-unified-rbac/)
+
+Documents Microsoft Defender XDR configuration, role-based access control (RBAC), permissions, and relevant security settings.
+
+### [Defense Evasion](./Microsoft%20Defender%20XDR/03-defense-evasion/)
 
 Explores behaviours intended to avoid security controls or reduce visibility.
 
-### [Privilege Escalation](./defender-xdr/privilege-escalation/)
+### [Privilege Escalation](./Microsoft%20Defender%20XDR/04-privilege-escalation/)
 
 Examines how excessive permissions or security weaknesses can allow access to capabilities beyond those initially available.
 
-### [Lateral Movement](./defender-xdr/lateral-movement/)
+### [Lateral Movement](./Microsoft%20Defender%20XDR/05-lateral-movement/)
 
-Focuses on the concept of movement between systems or resources and the evidence that may help defenders investigate it.
+Focuses on movement between systems or resources and the evidence that may help defenders investigate it.
 
-### [Execution](./defender-xdr/execution/)
+### [Execution](./Microsoft%20Defender%20XDR/06-execution/)
 
 Covers the investigation of process execution and related telemetry where supported by the available data.
 
-### [Credential Access](./defender-xdr/credential-access/)
+### [Credential Access](./Microsoft%20Defender%20XDR/07-credential-access/)
 
 Examines activity associated with credential-access techniques, including the investigation of Mimikatz-related alerts and process evidence where present.
 
-**Featured project:** [Credential Access — Mimikatz Detection](./defender-xdr/credential-access/07-credential-access.md)
+**Featured project:** [Credential Access — Mimikatz Detection](./Microsoft%20Defender%20XDR/07-credential-access/07-credential-access.md)
 
 This investigation focuses on reviewing security alerts, examining process-related evidence, documenting findings, and considering defensive responses.
 
 The report and screenshots should reflect the evidence actually captured during the lab.
 
 ---
-
 ## 4. Azure Cloud Penetration Testing
 
 **Directory:** [`azure-cloud-penetration-testing/`](./azure-cloud-penetration-testing/)
