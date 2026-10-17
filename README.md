@@ -39,15 +39,14 @@ Cloud adoption introduces security challenges that extend beyond traditional end
 
 This portfolio explores these challenges through practical exercises and documented investigations involving Microsoft security technologies.
 
-The repository is organized into five main technical areas:
+The repository is organized into four main technical areas:
 
 | Area | Purpose |
 |---|---|
 | Microsoft Sentinel | SIEM configuration, log ingestion, KQL investigations, analytics rules, alerts, incidents, workbooks, and automation |
 | KQL | Query development, authentication analysis, endpoint and network investigation, identity analysis, threat hunting, and detection engineering |
 | Microsoft Defender XDR | Investigation of attack techniques and defensive security scenarios |
-| Azure Cloud Penetration Testing | Authorized cloud-security testing concepts and DevSecOps |
-| Security Investigations | Structured case studies documenting security questions, evidence, findings, and remediation |
+| Azure Cloud Penetration Testing | Authorized cloud-security testing concepts and DevSecOps || Security Investigations | Structured case studies documenting security questions, evidence, findings, and remediation |
 
 Together, these areas represent the workflow I am learning to follow: understand the environment, examine available evidence, investigate suspicious behaviour, assess risk, and recommend improvements.
 
@@ -90,7 +89,7 @@ Tools are listed as part of the portfolio's technical scope. Each project should
 
 ## Repository Roadmap
 
-The repository is divided into five top-level areas.
+The repository is divided into four top-level areas.
 
 ### 1. Microsoft Sentinel
 
