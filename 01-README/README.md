@@ -106,13 +106,13 @@ A collection of query-development and investigation topics covering authenticati
 
 ### 3. Microsoft Defender XDR
 
-[Open the Defender XDR projects](./Microsoft-Defender-XDR/)
+[Open the Defender XDR projects](./[Microsoft Defender XDR](./Microsoft-Defender-XDR/)
 
 Investigations organized around adversary behaviour and security techniques, including credential access, execution, privilege escalation, lateral movement, and defense evasion.
 
 ### 4. Azure Cloud Penetration Testing
 
-[Open the Azure cloud-testing projects](./Azure-cloud-penetration-testing/)
+[Open the Azure cloud-testing projects](./[Azure Cloud Penetration Testing](./Azure%20cloud%20penetration%20testing/)/)
 
 Authorized cloud-security testing concepts, cloud configuration assessment, and DevSecOps-related learning.
 
@@ -307,31 +307,31 @@ KQL is central to investigating security telemetry in Azure Monitor, Log Analyti
 
 This section organizes query development by investigative domain.
 
-### [Fundamentals](./kql/fundamentals/)
+### [Fundamentals](./KQL/fundamentals/)
 
 Core query syntax, filtering, projection, sorting, aggregation, time ranges, and data exploration.
 
-### [Authentication](./kql/authentication/)
+### [Authentication](./KQL/authentication-investigation/)
 
 Authentication-event analysis, sign-in patterns, account activity, and risk-related metadata where available.
 
-### [Endpoint Investigation](./kql/endpoint%20investigation/)
+### [Endpoint Investigation](./KQL/endpoint-investigation/)
 
 Investigation of process execution and endpoint events when suitable endpoint telemetry is available.
 
-### [Network Investigation](./kql/network%20investigation/)
+### [Network Investigation](./KQL/network-investigation/)
 
 Analysis of network-related events, connections, and communication patterns where the data source contains the required fields.
 
-### [Identity Investigation](./kql/identity%20investigation/)
+### [Identity Investigation](./KQL/identity-investigation/)
 
 Investigation of identity activity, account relationships, authentication context, and access-related events.
 
-### [Threat Hunting Investigation](./kql/threat-hunting%20investigation/)
+### [Threat Hunting Investigation](./KQL/threat-hunting-investigation/)
 
 Hypothesis-driven searches for patterns that may indicate suspicious behaviour and warrant further analysis.
 
-### [Detection Engineering](./kql/detection%20eng/)
+### [Detection Engineering](./KQL/detection-engineering/)
 
 Development and refinement of query logic intended to identify security-relevant activity.
 
