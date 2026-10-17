@@ -137,8 +137,7 @@ Topics include:
 - Recording configuration evidence and setup notes.
 
 **Key files:**
-- `README.md` — project overview and setup documentation.
-- `notes.md` — supplementary learning notes.
+- `setup.md` — supplementary learning notes.
 - `screenshots/` — supporting evidence, where available.
 
 ### Project 02 — Data Connectors
@@ -155,8 +154,7 @@ Topics include:
 - Recognizing the impact of missing or incomplete data.
 
 **Key files:**
-- `README.md` — project description.
-- `connectors.md` — connector notes and documentation.
+- `data-connectors.md` — connector notes and documentation.
 - `screenshots/` — configuration evidence, where available.
 
 ### Project 03 — Log Analytics
@@ -173,7 +171,6 @@ Topics include:
 - Selecting suitable data sources for investigative questions.
 
 **Key files:**
-- `README.md` — project overview.
 - `tables.md` — table and schema notes.
 - `screenshots/` — supporting evidence, where available.
 
@@ -192,8 +189,7 @@ Topics include:
 - Interpreting results in context.
 
 **Key files:**
-- `README.md` — investigation methodology.
-- `queries.kql` — saved query examples.
+- `investigation-triage.md` — investigation methodology.
 - `screenshots/` — query results and supporting evidence, where available.
 
 ### Project 05 — Analytics Rules
@@ -211,7 +207,6 @@ Topics include:
 - Detection limitations and tuning.
 
 **Key files:**
-- `README.md` — project overview.
 - `detection-rules.md` — documented detection logic.
 - `screenshots/` — rule configuration evidence, where available.
 
@@ -246,7 +241,9 @@ Topics include:
 - Improving the presentation of investigative results.
 - Supporting monitoring and operational review.
 
-**Key file:** `README.md`
+**Key file:** 
+`README.md`
+- `screenshots/` — supporting evidence, where available.
 
 ### Project 08 — Automation
 
@@ -261,7 +258,9 @@ Topics include:
 - Playbook design considerations.
 - Approval, permissions, and safeguards for automated actions.
 
-**Key file:** `README.md`
+**Key file:** 
+`README.md`
+- `screenshots/` — supporting evidence, where available.
 
 ---
 
@@ -346,63 +345,48 @@ The report and screenshots should reflect the evidence actually captured during 
 ---
 ## 4. Azure Cloud Penetration Testing
 
-**Directory:** [`azure-cloud-penetration-testing/`](./azure-cloud-penetration-testing/)
+**Directory:** [`Azure-cloud-penetration-testing/`](./Azure%20cloud%20penetration%20testing/)
 
-This section focuses on understanding cloud-security weaknesses, access boundaries, and the defensive implications of misconfigured resources in authorized training environments.
+This section documents Azure cloud security testing, DevSecOps practices, and practical investigation case studies. It focuses on identifying cloud security risks, reviewing access controls and configurations, investigating virtual machine activity, and documenting evidence-based findings.
 
-### [DevSecOps](./azure-cloud-penetration-testing/devsecops/)
+### [Azure DevSecOps](./Azure%20cloud%20penetration%20testing/02-Azure%20DevSecOps/)
 
-Explores the integration of security into development and operational processes.
+Explores DevSecOps principles for Azure environments, including integrating security into development and deployment workflows, identifying configuration risks, and applying security controls throughout the software lifecycle.
 
-Topics may include secure configuration, permissions, security checks, and reducing risk throughout the development lifecycle.
+### [Azure Virtual Machine Privilege Escalation — Case 002](./Azure%20cloud%20penetration%20testing/03-Azure%20Virtual%20Machine%20Privilege%20Escalation%20%28case%20002.md%29)
 
-### [Cloud Testing](./azure-cloud-penetration-testing/cloud-testing/)
+**Focus:** Investigating Azure virtual machine permissions and privilege-escalation risks, including the role of managed identities, Azure role-based access control (RBAC), permission scopes, and virtual machine management capabilities.
 
-Documents authorized cloud-security testing concepts and the assessment of cloud resources, identities, configurations, and access controls.
+**Key Learning Areas:**
+- Azure RBAC roles, assignments, and scope
+- System-assigned managed identities and their permissions
+- Virtual machine management capabilities and associated security risks
+- Privilege-escalation risk assessment and least-privilege principles
+- Evidence collection, findings documentation, and mitigation recommendations
 
-A well-documented assessment should establish its scope, describe the evidence collected, explain the potential impact of a finding, and recommend remediation.
+### [Azure Cloud Security Investigation — Case 001](./Azure%20cloud%20penetration%20testing/04-Azure%20Cloud%20Security%20Investigation%20%28case%20001.md)
 
----
+**Focus:** Investigating Azure cloud security activity to identify potential misconfigurations, assess access permissions, analyze available evidence, and determine appropriate security improvements.
 
-## 5. Security Investigations
+**Key Learning Areas:**
+- Azure resource discovery and security posture review
+- Identity and access management (IAM)
+- Analysis of cloud configurations and permission assignments
+- Evidence-based investigation and risk assessment
+- Security findings, remediation priorities, and defensive recommendations
 
-**Directory:** [`investigations/`](./investigations/)
+### [Azure VM and Extension Investigation — Case 003](./Azure%20cloud%20penetration%20testing/05-Azure%20VM%20and%20Extension%20Investigation%20%28case%20003.md)
 
-The case-study section brings together security questions, technical evidence, findings, and remediation recommendations.
+**Focus:** Examining Azure virtual machines and VM extensions to understand their configuration, management capabilities, execution context, and potential security implications.
 
-Each case should be independently understandable and should distinguish confirmed observations from hypotheses.
+**Key Learning Areas:**
+- Azure VM extensions and their operational purpose
+- VM configuration and extension-related security risks
+- Permissions and access required to manage virtual machines and extensions
+- Reviewing available configuration and activity evidence
+- Hardening recommendations, least privilege, and secure VM management
 
-### [Case 001 — Azure Cloud Security Investigation](./investigations/case-001%20Azure%20Cloud%20Security%20Investigation/)
-
-**Focus:** Azure cloud-security investigation.
-
-This case is intended to document the investigation of an Azure security scenario, including the environment, available evidence, relevant identities or resources, findings, and recommended defensive improvements.
-
-### [Case 002 — Azure Virtual Machine Privilege Escalation](./investigations/case-002%20Azure%20Virtual%20Machine%20Privilege%20Escalation/)
-
-**Focus:** Managed identities, Azure RBAC, role-assignment scope, and virtual-machine security.
-
-This case examines how an over-privileged identity may create risk beyond its originating workload. The investigation should establish the actual permissions, scope, and demonstrated impact in the authorized lab rather than assume an attack path.
-
-Key learning areas include:
-
-- Understanding system-assigned managed identities.
-- Reviewing Azure role assignments.
-- Assessing permission scope.
-- Evaluating least-privilege requirements.
-- Documenting potential privilege-escalation paths.
-- Recommending tighter access controls and monitoring.
-
-### [Case 003 — Azure VM and Extension Investigation](./investigations/case-003%20Azure%20VM%20and%20Extension%20Investigation/)
-
-**Focus:** Azure virtual-machine management and extension-related security considerations.
-
-This case is intended to document how VM-management capabilities and extension configuration may affect the security of a cloud workload.
-
-Areas of analysis include the relevant resource configuration, identity and permission requirements, observed behaviour, potential impact, and defensive controls.
-
-The final report should distinguish the lab's demonstrated behaviour from general security implications.
-
+**Documentation standard:** Each case study include its objective, scope, investigation methodology, evidence or screenshots, verified findings, and recommended defensive actions. Conclusions are supported by evidence collected during the lab.
 ---
 
 ## Investigation Methodology
