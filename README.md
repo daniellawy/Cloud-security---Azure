@@ -386,7 +386,6 @@ Explores DevSecOps principles for Azure environments, including integrating secu
 - Reviewing available configuration and activity evidence
 - Hardening recommendations, least privilege, and secure VM management
 
-**Documentation standard:** Each case study include its objective, scope, investigation methodology, evidence or screenshots, verified findings, and recommended defensive actions. Conclusions are supported by evidence collected during the lab.
 ---
 
 ## Investigation Methodology
