@@ -158,7 +158,7 @@ The investigation confirmed that the managed identity did not provide the same d
 * Apply least privilege to Azure identities.
 * Monitor Azure Activity Logs for VM configuration changes.
 
-## Result
+## Results
 
 The investigation demonstrated a broader Azure cloud-security assessment methodology.
 
